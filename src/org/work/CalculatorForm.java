@@ -7,6 +7,11 @@ import java.awt.Label;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.TextEvent;
+import java.awt.event.TextListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public class CalculatorForm {
 
@@ -52,12 +57,30 @@ public class CalculatorForm {
 		lblResult.setBounds(20, 210, 200, 20);
 		frame.add(lblResult);
 
+		tfFirstNumber.addTextListener(new TextListener() {
+
+			@Override
+			public void textValueChanged(TextEvent e) {
+				// TODO Auto-generated method stub
+
+				System.out.println(tfFirstNumber.getText());
+
+			}
+		});
+
+//		frame.addWindowListener((WindowListener) new WindowAdapter() {
+//			@Override
+//			public void windowClosing(WindowEvent we) {
+//				System.exit(0);
+//			}
+//		});
+
 		btnCalculate.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//TODO: Check if there are other inputs other than numbers.
-				
+				// TODO: Check if there are other inputs other than numbers.
+
 				String numberFirst = tfFirstNumber.getText();
 				String numberSecond = tfSecondNumber.getText();
 
