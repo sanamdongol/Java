@@ -38,6 +38,7 @@ public class CalculatorForm {
 
 		TextField tfSecondNumber = new TextField();
 		tfSecondNumber.setBounds(125, 110, 100, 30);
+
 		frame.add(tfSecondNumber);
 
 		Button btnReset = new Button("Reset");
@@ -68,12 +69,12 @@ public class CalculatorForm {
 			}
 		});
 
-//		frame.addWindowListener((WindowListener) new WindowAdapter() {
-//			@Override
-//			public void windowClosing(WindowEvent we) {
-//				System.exit(0);
-//			}
-//		});
+		frame.addWindowListener((WindowListener) new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent we) {
+				System.exit(0);
+			}
+		});
 
 		btnCalculate.addActionListener(new ActionListener() {
 

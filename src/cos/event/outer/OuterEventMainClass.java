@@ -1,4 +1,4 @@
-package cosmos.event.outer;
+package cos.event.outer;
 
 import java.awt.Button;
 import java.awt.Frame;

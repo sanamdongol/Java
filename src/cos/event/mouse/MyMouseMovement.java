@@ -1,4 +1,4 @@
-package cosmos.event.mouse;
+package cos.event.mouse;
 
 import java.awt.Frame;
 import java.awt.Label;

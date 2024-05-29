@@ -1,4 +1,4 @@
-package cosmos.event.key;
+package cos.event.key;
 
 import java.awt.Frame;
 import java.awt.Label;

@@ -1,4 +1,4 @@
-package cosmos.event.outer;
+package cos.event.anonymous;
 
 import java.awt.Button;
 import java.awt.Frame;
@@ -6,14 +6,13 @@ import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class WithInClassEvent implements ActionListener {
+public class AnonyMouseEventExample {
 
-	TextField tf;
+	public AnonyMouseEventExample() {
 
-	public WithInClassEvent() {
-		Frame frame = new Frame("Other Class");
+		Frame frame = new Frame();
 
-		tf = new TextField();
+		TextField tf = new TextField();
 		tf.setBounds(10, 40, 150, 20);
 		frame.add(tf);
 
@@ -21,22 +20,24 @@ public class WithInClassEvent implements ActionListener {
 		btn.setBounds(10, 65, 150, 20);
 		frame.add(btn);
 
-		// register listener by passing current instance
-		btn.addActionListener(this);
-
+		btn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				  System.out.println("Hello");
+				
+			}
+		});
+		
+		
 		frame.setLayout(null);
 		frame.setSize(200, 200);
 		frame.setVisible(true);
 	}
 
 	public static void main(String[] args) {
-		new WithInClassEvent();
-
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		tf.setText("Within class");
+		// TODO Auto-generated method stub
+			new AnonyMouseEventExample();
 	}
 
 }
