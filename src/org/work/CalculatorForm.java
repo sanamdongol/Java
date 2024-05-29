@@ -69,12 +69,14 @@ public class CalculatorForm {
 			}
 		});
 
-		frame.addWindowListener((WindowListener) new WindowAdapter() {
-			@Override
-			public void windowClosing(WindowEvent we) {
-				System.exit(0);
-			}
-		});
+//		frame.addWindowListener((WindowListener) new WindowAdapter() {
+//			@Override
+//			public void windowClosing(WindowEvent we) {
+//				System.exit(0);
+//			}
+//		});
+		
+		
 
 		btnCalculate.addActionListener(new ActionListener() {
 
